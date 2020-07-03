@@ -1,0 +1,107 @@
+/*global css*/
+
+/*@font-face {
+	font-family: 
+}
+*/
+
+*{
+	box-sizing:border-box;
+	
+}
+
+html,body{
+	margin: 0 ;
+	padding:0;
+}
+
+body{
+	font-family: Montserrat-Regular;
+	font-size:14px;
+	line-height: 1.5em;
+	color: #333;
+	background-color: #f7f7f7;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family:Lato,sans-serif,arial;
+
+}
+h1{
+	margin: 0;
+	padding: 0;
+}
+h4{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*Navigation Bar*/
+
+
+
+/*Slider*/
+ .mySlides {display:none;}
+.aboutme{
+	color: red;
+}
+
+
+/*Slider  text over image*/
+* { color:black; text-decoration: none;}
+
+
+/*ABOUT ME underline*/
+hr.style3 {
+	margin-top: 10px;
+	border-top: 1px dashed #46ae32;
+	width: 91px;
+}
+
+
+
+
+/*progressbar*/
+	.progress{
+    width: 100%;
+    background: #eee;
+    height: 20px;
+    /*margin: 3px;*/
+    margin-top: 33px;
+}
+
+.html, .css, .jquery, .php{
+    width: 0;
+    background: green;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px
+}
+
+
+
+
+
+
+
+
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+.portfolioimage:hover {
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+
+
+   

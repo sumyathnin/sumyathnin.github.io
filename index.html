@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+
+
+
+.v1center {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+.v2center {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.boxcontainerimage {
+  position: relative;
+  width: auto;
+  height: 900;
+}
+.image {
+  display: block;
+ 
+}
+
+
+.overlay {
+  font-family: Montserrat-MediumItalic;
+  margin-left: -15px;
+  position: absolute; 
+  bottom: 0; 
+
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  color: white;
+  font-size: 22px;
+ height: 970px;
+  text-align: center;
+  padding-top: 830px;
+  
+}
+
+.boxcontainerimage .overlay {
+  opacity: 0.9;
+}
+
+
+
+
+
+
+
+.strike {
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+    
+    font-size: 14px;
+    }
+
+    .strike > span {
+        position: relative;
+        display: inline-block;
+    }
+  
+    .strike > span:before,
+    .strike > span:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        /* Here is the modification */
+        border-top: 4px double #266891;
+    }
+
+    .strike > span:before {
+        right: 100%;
+        margin-right: 15px;
+    }
+
+    .strike > span:after {
+        left: 100%;
+        margin-left: 15px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+.progress-title{
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  font-family: Montserrat-Medium;
+    margin: 10px 0 15px;
+}
+.progress{
+    height: 10px;
+    background: #e9e9ea;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    overflow: visible;
+    position: relative;
+}
+.progress:before,
+.progress:after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    z-index: 1;
+}
+.progress:after{
+    border: 2px solid #e9e9ea;
+    left: auto;
+    right: 0;
+}
+.progress .progress-bar{
+    box-shadow: none;
+    border: none;
+    border-radius: 18px;
+    position: relative;
+    -webkit-animation: animate-positive 8s;
+    animation: animate-positive 8s;
+}
+.progress .progress-value{
+    width: 45px;
+    height: 32px;
+    line-height: 26px;
+    border-radius: 12px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    z-index: 2;
+}
+.progress.orange:before{ border: 2px solid #fe3b3b; }
+.progress.blue:before{ border: 2px solid #1a4966; }
+.progress.green:before{ border: 2px solid #53aa2c; }
+.progress.purple:before{ border: 2px solid #66406f; }
+.progress.orange .progress-value{
+    border: 2px solid #fe3b3b;
+    color: #fe3b3b;
+}
+.progress.blue .progress-value{
+    border: 2px solid #1a4966;
+    color: #1a4966;
+}
+.progress.green .progress-value{
+    border: 2px solid #53aa2c;
+    color: #53aa2c;
+}
+.progress.purple .progress-value{
+    border: 2px solid #66406f;
+    color: #66406f;
+}
+@-webkit-keyframes animate-positive{
+    0%{ width: 0; }
+}
+@keyframes animate-positive{
+    0%{ width: 0; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ .coverimage{
+
+  background-size:cover;
+ }
+
+  body {
+      position: relative; 
+  }
+  #section1 {padding-top:50px;height:auto;color: #1b1b1b; background-color: #f4f4f4;}
+  #section2 {padding-top:auto;height:auto;color: #1b1b1b; background-color: #fafafa;}
+  #section3 {padding-top:auto;height:auto;color: #1b1b1b; background-color: #fafafa;}
+  #section4 {padding-top:auto;height:auto;color: #1b1b1b; background-color: #fafafa;}
+  #section5 {padding-top:auto;height:auto;color: #1b1b1b; background-color: #fafafa;}
+ 
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #266891">
+  <div class="container">
+    <div></div>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" style="color: #fff;font-size: 25px;font-family: Merriweather-Regular">Su</a>
+    </div>
+    <div>
+      <div class="navbar-collapse collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#section1">Home</a></li>
+          <li><a href="#section2">About</a></li>
+          <li><a href="#section3">Experience</a></li>
+          <li><a href="#section4">Project</a></li>
+          <li><a href="#section5">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+
+
+<!-- Home -->
+<div id="section1" class="container-fluid boxcontainerimage" style="margin-left: -30px;padding-right:0px " >
+<!-- <img src="assets/img/SUMYAT.jpg" class="img-responsive center-block w-100 coverimage" 
+            height="900" > -->
+
+  <img src="assets/img/SUMYAT.jpg" class="img-responsive center-block w-100 coverimage" 
+            height="700"  alt="Avatar" class="image">
+  <div class="overlay">Hi EveryOne <br>I'm UI/UX designer</div>
+
+        
+</div>
+
+
+<!-- About Me -->
+<div id="section2" class="container-fluid">
+  <!--  <h4 style="font-family: Merriweather-Regular;margin-top: 50px;text-align: center">ABOUT Me</h4> -->
+   <div class="strike">
+   <span style="font-family: Merriweather-Regular;margin-top: 50px;text-align: center;">ABOUT Me</span>
+   </div>
+   <div>
+     
+   </div>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        
+      </div>
+        <div class="col-xs-12 col-md-4"> 
+          <img src="assets/img/smh.jpg" class="img-fluid center-block"
+            style="margin-top:25px;/*border: 3px solid #fff;*/border-radius: 10px;box-shadow:8px 8px 0px #20638D" width="280" height="280">
+         </div>
+        <div class="col-xs-12 col-md-4">
+         <h4 style="font-family: Montserrat-Medium;margin-top: 30px" >Hello, Nice to meet you</h4>
+         <p style="font-family: Montserrat-Regular;">I have rich experience in website design, mobile app design. I also create bussiness card,line art and graphic design images. I like to talk
+with people about unique approach. Feel free to contact me writing 
+an email with your project idea.  </p>
+<hr style="text-decoration-color: #20638D;">
+ <div class="row">
+          <div class="col-sm-8 col-xs-12" style="font-family: Montserrat-Light;">
+            <p><span style="font-family: Montserrat-Medium;">Name:</span> Su Myat Hnin </p>
+            <p><span style="font-family: Montserrat-Medium;">Email: </span>sumyathnin.2017u@gmail.com</p>
+          </div>
+             <div class="col-sm-4 col-xs-12" style="font-family: Montserrat-Light;">
+            <p><span style="font-family: Montserrat-Medium;">Age:</span> 23</p>
+            <p><span style="font-family: Montserrat-Medium;">From:</span> Yangon</p>
+          </div>
+        </div>
+         <div class="col-md-2">
+        
+      </div>
+        </div>
+       
+    </div>
+
+</div> 
+</div> 
+
+
+
+
+
+
+
+
+
+
+<div id="section3" class="container-fluid">
+<!-- <h4 style="font-family: Merriweather-Regular;margin-top: 50px;text-align: center">EDUCATION & EXPERIENCE</h4> -->
+  <div class="strike">
+   <span style="font-family: Merriweather-Regular;margin-top: 50px;text-align: center">EDUCATION & EXPERIENCE</span>
+   </div>
+  <div class="container-fluid" style="margin-top: 30px;">
+    <div class="row">
+      <div class="col-md-4 col-xs-12" >
+     <div class="panel panel-primary" style="box-shadow:5px 5px 5px #eee">
+        <h5 style="font-family: Montserrat-Medium;margin-left: 10px">Bachelor Degree in Computer Science(CS)</h5>
+        <p style="font-family: Montserrat-Light;margin-left: 10px">2014-2019</p>
+        <p style="font-family: Montserrat-Light;margin-left: 10px">Create personal & group website on the execution of individual or own ideas.</p>
+     </div>
+      </div>
+
+       <div class="col-md-4 col-xs-12">
+        <div class="panel panel-primary" style="box-shadow:5px 5px 5px #eee">
+        <h5 style="font-family: Montserrat-Medium;margin-left: 10px">Internship Program - Food2U</h5>
+        <p style="font-family: Montserrat-Light;margin-left: 10px">2019 June - October(4months)</p>
+        <p style="font-family: Montserrat-Light;margin-left: 10px">Have experience developing website and creating website design with team.</p>
+     </div>
+      </div>
+
+
+<div class="col-md-4 col-xs-12" >
+     <div class="panel panel-primary" style="box-shadow:5px 5px 5px #eee">
+        <h5 style="font-family: Montserrat-Medium;margin-left: 10px">UI/UX & Creative Designer - Baanova</h5>
+        <p style="font-family: Montserrat-Light;margin-left: 10px">2019 November - Present</p>
+        <p style="font-family: Montserrat-Light;margin-left: 10px">Create mobile app design and themes for flight & hotel applications,business cards, etc.</p>
+     </div>
+      </div>
+
+
+
+
+     <div class="row" >
+        <div class="col-md-6">
+            <h3 class="progress-title">Adobe Illustrator</h3>
+            <div class="progress blue">
+                <div class="progress-bar" style="width:70%; background:#266891;">
+                    <div class="progress-value">70%</div>
+                </div>
+            </div>
+            <h3 class="progress-title">Adobe XD</h3>
+            <div class="progress blue">
+                <div class="progress-bar" style="width:90%; background:#266891;">
+                    <div class="progress-value">90%</div>
+                </div>
+            </div>
+        </div>
+         <div class="col-md-6">
+            <h3 class="progress-title">Adobe Photoshop</h3>
+            <div class="progress blue">
+                <div class="progress-bar" style="width:80%; background:#266891;">
+                    <div class="progress-value">80%</div>
+                </div>
+            </div>
+            <h3 class="progress-title">Invision</h3>
+            <div class="progress blue">
+                <div class="progress-bar" style="width:65%; background:#266891;">
+                    <div class="progress-value">65%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- 
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 designcard1" align="center">
+     <p>Web Design</p>
+    </div>
+    <div class="col-md-3 designcard2" align="center">
+      hi
+    </div>
+   <div class="col-md-3  designcard3" align="center">
+      ho
+    </div>
+    <div class="col-md-3  designcard4" align="center">
+      heuy
+    </div> 
+  </div>
+</div> -->
+  </div>
+</div>
+
+ <!-- <h4 style="font-family: Merriweather-Regular;margin-top: 50px;text-align: center;">PROJECTS</h4> -->
+
+<div id="section4" class="container">
+   <div class="strike">
+   <span style="font-family: Merriweather-Regular;margin-top: 50px;text-align: center">PROJECTS</span>
+   </div>
+
+ <h4 style="font-family: Montserrat-Medium;color: #20638D;font-size: 18px">Mobile Apps</h4>
+ <h4 style="font-family: Montserrat-Medium;font-size: 16px">Baanova Flight (iOS / Android)</h4>
+<div class="row">
+      <div class="col-md-1">
+    
+      </div>
+      <div class="col-md-5 col-xs-12 v1center" align="center" style="margin-top: 0px"> 
+          <img src="assets/img/Baanova1.jpg" class="img-fluid center-block"
+            style="border-radius: 10px" width="260" height="380">
+      </div>
+      <div class="col-md-5 col-xs-12 v1center" align="center"> 
+          <p style="font-family: Montserrat-Medium;font-size: 14px">This app is for travellers to book flight tickets and hotel rooms with online services.It can make online payment for tickets,rooms and book easily using this app.</p>
+      </div>
+      <div class="col-md-1">
+    
+      </div>
+</div>
+
+ <!-- <h4 style="font-family: Montserrat-Medium;font-size: 16px">Baanova Hotel (iOS / Android)</h4>
+<div id="section4" class="container">
+<div class="row">
+  <div class="col-md-1">
+    
+  </div>
+ <div class="col-md-5 col-xs-12 v2center" style="margin-top: -13px"> 
+  <img src="assets/img/hotel.jpg" class="img-fluid center-block"
+            style="border-radius: 10px" width="300" height="300">
+</div>
+<div class="col-md-5 col-xs-12 v2center" align="center"> 
+  <p style="font-family: Montserrat-Medium;;font-size: 14px">This app is for users to book Hotel rooms with online services.
+It can make online payment for rooms and book easily using this
+app.</p>
+  </div>
+  <div class="col-md-1">
+    
+  </div>
+  </div>
+ -->
+</div>
+</div>
+</div>
+</div>
+
+<div id="section5" class="container-fluid">
+<!-- <h4 style="font-family: Merriweather-Regular;margin-top: 50px;text-align: center">CONTACT</h4>
+ -->
+ <div class="strike">
+   <span style="font-family: Merriweather-Regular;margin-top: 30px;text-align: center">CONTACT</span>
+   </div>
+
+        <p style="font-size: 14px;font-family: Montserrat-Regular;text-align: center">Feel free to contact me at any time</p>
+   <!--     <h4 style="font-family: Montserrat-Regular;font-size: 20px">Lets talk about everything</h4> -->
+
+<div class="container-fluid" style="font-family: Montserrat-Medium">
+  <div class="row">
+    <div class="col-md-4 col-xs-12" align="center">
+      <img src="assets/img/phone.svg"
+             width="32" height="32" style="margin-top: 20px"><br>
+             +95 9443259991 <br>
+             +95 9796212342
+    </div>
+    <div class="col-md-4 col-xs-12" align="center">
+      <img src="assets/img/email.svg"
+             width="32" height="32" style="margin-top: 20px"><br>
+             sumyathnin.2017u@gmail.com <br>
+             su161297@gmail.com
+    </div>
+       <div class="col-md-4 col-xs-12" align="center">
+      <img src="assets/img/location.svg"
+             width="34" height="34" style="margin-top: 20px"><br>
+             No-21,3rd floor,OhnPin Street, <br> Kyitmyindaing Township,Yangon
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- 
+       <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12"> 
+               <img src="assets/img/phone.svg"
+             width="16" height="16"> &emsp;09443259991 <br>
+       <img src="assets/img/email.svg" 
+             width="16" height="16"> &emsp;sumyathnin.2017u@gmail.com   
+             </div>
+          
+</div>
+
+</div> -->
+<div align="center" style="margin-top: 30px">
+<a href ="https://www.facebook.com/sumyat.hnin.96"><img src="assets/img/facebook.svg"  width="26" height="26"></a>
+&emsp;<a href ="https://www.instagram.com/sumyathnin1612/"><img src="assets/img/instagram.svg"  width="26" height="26"></a>
+&emsp;<a href ="www.linkedin.com/in/su-myat-hnin-793455191"><img src="assets/img/linkedin.svg"  width="26" height="26"></a>
+&emsp;<a href ="https://www.behance.net/sumyathnin"><img src="assets/img/behance.svg"  width="26" height="26"></a>
+</div>
+
+<div>
+<p style="font-family: Montserrat-Regular;text-align: center;font-size: 12px;margin-top:8px">© 2020 SHM Portifolio | All Right Reserved.</p>
+</div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+$(document).click(function (event) {
+    var clickover = $(event.target);
+    var $navbar = $(".navbar-collapse");               
+    var _opened = $navbar.hasClass("in");
+    if (_opened === true && !clickover.hasClass("navbar-toggle")) {      
+        $navbar.collapse('hide');
+    }
+});
+  
+
+$(window).scroll(function(){
+    $(".top").css("opacity", 1 - $(window).scrollTop() / 250);
+  });
+
+
+
+
+  var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #266891}";
+        document.body.appendChild(css);
+    };
+
+</script>
+</body>
+</html>
