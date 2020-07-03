@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Su Myat Hnin </title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -12,6 +12,58 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <style>
+
+.gallery-title
+{
+    font-size: 36px;
+    color: #42B32F;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #266891;
+    border-radius: 5px;
+    text-align: center;
+    color: #266891;
+    margin-bottom: 10px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #266891;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #266891;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #266891;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
 
 
 
@@ -250,7 +302,7 @@
 <!-- <img src="assets/img/SUMYAT.jpg" class="img-responsive center-block w-100 coverimage" 
             height="900" > -->
 
-  <img src="SUMYAT.JPG" class="img-responsive center-block w-100 coverimage" 
+  <img src="assets/img/SUMYAT.jpg" class="img-responsive center-block w-100 coverimage" 
             height="700"  alt="Avatar" class="image" />
   <div class="overlay">Hi EveryOne <br>I'm UI/UX designer</div>
 
@@ -273,7 +325,7 @@
         
       </div>
         <div class="col-xs-12 col-md-4"> 
-          <img src="smh.jpg" class="img-fluid center-block"
+          <img src="assets/img/smh.jpg" class="img-fluid center-block"
             style="margin-top:25px;/*border: 3px solid #fff;*/border-radius: 10px;box-shadow:8px 8px 0px #20638D" width="280" height="280" />
          </div>
         <div class="col-xs-12 col-md-4">
@@ -413,7 +465,7 @@ an email with your project idea.  </p>
     
       </div>
       <div class="col-md-5 col-xs-12 v1center" align="center" style="margin-top: 0px"> 
-          <img src="Baanova1.jpg" class="img-fluid center-block"
+          <img src="assets/img/Baanova1.jpg" class="img-fluid center-block"
             style="border-radius: 10px" width="260" height="380" />
       </div>
       <div class="col-md-5 col-xs-12 v1center" align="center"> 
@@ -444,14 +496,92 @@ app.</p>
   </div>
   </div>
  -->
+<!-- </div>
 </div>
-</div>
-</div>
+</div> -->
+
+ <div class="row">
+        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+           <h4 style="font-family: Montserrat-Medium;color: #20638D;font-size: 18px;margin-top: 30px;margin-bottom: 20px">My Recent Work (Prototypes)</h4>
+        </div>
+
+        <div align="center" style="font-family: Montserrat-Medium">
+            <button class="btn btn-default filter-button" data-filter="all">All</button>
+            <button class="btn btn-default filter-button" data-filter="Web">Web Design</button>
+            <button class="btn btn-default filter-button" data-filter="Mobile">Mobile Design</button>
+           <!--  <button class="btn btn-default filter-button" data-filter="spray">Splash Screen</button>
+            <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button> -->
+        </div>
+        <br/>
+
+
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Web">
+                <img src="assets/img/Airplane.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Mobile">
+                <img src="assets/img/Music.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Web">
+                <img src="assets/img/Deco.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Web">
+                <img src="assets/img/AppleWatch.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Mobile">
+                <img src="assets/img/Chair.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Web">
+                <img src="assets/img/Headphone.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Web">
+                <img src="assets/img/Learn4u.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Mobile">
+                <img src="assets/img/Learning.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Mobile">
+                <img src="assets/img/Ill.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Web">
+                <img src="assets/img/Beauty.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Mobile">
+                <img src="assets/img/Happy4U.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Mobile">
+                <img src="assets/img/Donut.jpg" class="img-responsive">
+            </div>
+        </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="section5" class="container-fluid">
-<!-- <h4 style="font-family: Merriweather-Regular;margin-top: 50px;text-align: center">CONTACT</h4>
- -->
+
  <div class="strike">
    <span style="font-family: Merriweather-Regular;margin-top: 30px;text-align: center">CONTACT</span>
    </div>
@@ -462,19 +592,19 @@ app.</p>
 <div class="container-fluid" style="font-family: Montserrat-Medium">
   <div class="row">
     <div class="col-md-4 col-xs-12" align="center">
-      <img src="phone.svg"
+      <img src="assets/img/phone.svg"
              width="32" height="32" style="margin-top: 20px" /><br>
              +95 9443259991 <br>
              +95 9796212342
     </div>
     <div class="col-md-4 col-xs-12" align="center">
-      <img src="email.svg" 
+      <img src="assets/img/email.svg" 
              width="32" height="32" style="margin-top: 20px" /><br>
              sumyathnin.2017u@gmail.com <br>
              su161297@gmail.com
     </div>
        <div class="col-md-4 col-xs-12" align="center">
-      <img src="location.svg"
+      <img src="assets/img/location.svg"
              width="34" height="34" style="margin-top: 20px" /><br>
              No-21,3rd floor,OhnPin Street, <br> Kyitmyindaing Township,Yangon
     </div>
@@ -498,10 +628,10 @@ app.</p>
 
 </div> -->
 <div align="center" style="margin-top: 30px">
-<a href ="https://www.facebook.com/sumyat.hnin.96"><img src="facebook.svg"  width="26" height="26" /></a>
-&emsp;<a href ="https://www.instagram.com/sumyathnin1612/"><img src="instagram.svg"  width="26" height="26" /></a>
-&emsp;<a href ="www.linkedin.com/in/su-myat-hnin-793455191"><img src="linkedin.svg"  width="26" height="26" /></a>
-&emsp;<a href ="https://www.behance.net/sumyathnin"><img src="behance.svg"  width="26" height="26" /></a>
+<a href ="https://www.facebook.com/sumyat.hnin.96"><img src="assets/img/facebook.svg"  width="26" height="26" /></a>
+&emsp;<a href ="https://www.instagram.com/sumyathnin1612/"><img src="assets/img/instagram.svg"  width="26" height="26" /></a>
+&emsp;<a href ="www.linkedin.com/in/su-myat-hnin-793455191"><img src="assets/img/linkedin.svg"  width="26" height="26" /></a>
+&emsp;<a href ="https://www.behance.net/sumyathnin"><img src="assets/img/behance.svg"  width="26" height="26" /></a>
 </div>
 
 <div>
@@ -524,6 +654,38 @@ app.</p>
 
 
 <script>
+
+$(document).ready(function(){
+
+    $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        }
+        else
+        {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+        }
+    });
+    
+    if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active");
+
+});
+
+
+
+
+
 
 $(document).click(function (event) {
     var clickover = $(event.target);
